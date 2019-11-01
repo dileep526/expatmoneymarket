@@ -1,0 +1,9 @@
+<div class="tab-pane fade in active">
+    <h3 class="head text-center">{{title}}</h3>
+    <h4 class="text-center">
+        <i class="fa fa-heart heart" style="color:#f48260;"></i>
+    </h4>
+    <div class="text-center">
+        <button class="btn btn-success btn-outline-rounded" [disabled]="!isFormValid" (click)="submit()"> Submit <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+    </div>
+</div>

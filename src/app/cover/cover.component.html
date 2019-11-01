@@ -1,0 +1,64 @@
+<form #coverForm="ngForm" class="editForm" novalidate>
+    <div class="form-horizontal">
+        <div class="tab-pane fade in active">
+
+                <!-- question1 -->
+
+            <h3 class="head text-center">{{question1}}</h3>
+            <br/>
+            <div class='row'>
+                <div class='col-xs-offset-4 col-xs-10 col-sm-offset-5 col-sm-4'>
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" #cover="ngModel" required name="cover" [(ngModel)]="coverType" value="YOU">
+                                Just Yourself 
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" #cover="ngModel" required name="cover" [(ngModel)]="coverType" value="PARTNER">
+                                Yourself and Partner
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" #cover="ngModel" required name="cover" [(ngModel)]="coverType" value="FAMILY">
+                                Family
+                            </label>
+                        </div>                      
+                    </div>
+                </div>               
+            </div>
+
+            <!-- question2 -->
+            
+            <h3 class="head text-center">{{question2}}</h3>
+            <br/>
+            <div class='row'>
+                <div class='col-xs-offset-4 col-xs-10 col-sm-offset-5 col-sm-4'>
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" #cover="ngModel" required name="healthcover" [(ngModel)]="healthcoverType" value="True">
+                                Yes 
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" #cover="ngModel" required name="healthcover" [(ngModel)]="healthcoverType" value="False">
+                                No Yourself
+                            </label>
+                        </div>                      
+                    </div>
+                </div>               
+            </div>
+
+
+            <div class="form-group text-center space-20">
+                <button class="btn btn-outline-rounded btn-info" [disabled]="!coverForm.valid" (click)="goToNext(coverForm)"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+            </div>
+
+        </div>
+    </div>
+</form>
